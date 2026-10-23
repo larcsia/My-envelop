@@ -168,11 +168,7 @@ if(navigator.share){
   $('shareBtn').hidden=false;
   $('shareBtn').onclick=async()=>{
       const baseUrl = window.location.origin + window.location.pathname;
-      try{
-          await navigator.share({
-              url: baseUrl
-          });
-      }catch(err){}
+      (await copy(baseUrl)) ? toast('Website Link copied ✓') : prompt('Copy this link:', baseUrl);
   };
 }
 
