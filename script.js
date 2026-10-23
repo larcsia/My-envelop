@@ -167,9 +167,14 @@ $('copyBtn').onclick=async()=>{
 if(navigator.share){
   $('shareBtn').hidden=false;
   $('shareBtn').onclick=async()=>{
-      const l = await buildLink();
-      if(!l)return;
-      try{await navigator.share({title:'My Envelop',text:'You\'ve got a secret message',url:l})}catch{}
+      const baseUrl = window.location.href.split('?')[0].split('#')[0];
+      try{
+          await navigator.share({
+              title: 'My Envelop', 
+              text: 'Create and send your own personalized digital envelopes!', 
+              url: baseUrl
+          });
+      }catch(err){}
   };
 }
 
@@ -235,12 +240,17 @@ async function init() {
     const P = new URLSearchParams(location.search);
     const id = P.get('id');
     const view = P.get('view');
+    
+    const welcomeScreen = document.getElementById('welcomeScreen');
+    const layout = document.getElementById('layout');
 
     if (id) {
-        document.getElementById('welcomeScreen').classList.add('hidden');
-        document.getElementById('layout').style.display = 'grid';
+        if (welcomeScreen) welcomeScreen.classList.add('hidden');
+        if (layout) {
+            layout.style.display = 'grid';
+            layout.classList.remove('edit');
+        }
         document.body.classList.add('view');
-        $('layout').classList.remove('edit');
         $('mainTitle').textContent = "You've got a secret message.";
         $('subTitle').textContent = 'Tap the envelope to open it.';
         
@@ -256,12 +266,19 @@ async function init() {
             $('subTitle').textContent = 'Error loading message.';
         }
     } else if (view === 'create') {
-        document.getElementById('welcomeScreen').classList.add('hidden');
-        document.getElementById('layout').style.display = 'grid';
+        if (welcomeScreen) welcomeScreen.classList.add('hidden');
+        if (layout) {
+            layout.style.display = 'grid';
+            layout.classList.add('edit');
+        }
+        document.body.classList.remove('view');
+        $('mainTitle').textContent = "Create an Envelope.";
+        $('subTitle').textContent = 'Customize below to preview.';
         update();
     } else {
-        document.getElementById('layout').style.display = 'none';
-        document.getElementById('welcomeScreen').classList.remove('hidden');
+        if (layout) layout.style.display = 'none';
+        if (welcomeScreen) welcomeScreen.classList.remove('hidden');
+        document.body.classList.remove('view');
     }
 }
 
@@ -269,6 +286,10 @@ document.getElementById('startBtn').addEventListener('click', () => {
     window.history.replaceState({}, '', '?view=create');
     document.getElementById('welcomeScreen').classList.add('hidden');
     document.getElementById('layout').style.display = 'grid';
+    document.getElementById('layout').classList.add('edit');
+    document.getElementById('mainTitle').textContent = "Create an Envelope.";
+    document.getElementById('subTitle').textContent = 'Customize below to preview.';
+    update();
 });
 
 init();
