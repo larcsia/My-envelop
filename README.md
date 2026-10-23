@@ -10,7 +10,7 @@ Create and send personalized, interactive digital envelopes to your friends. Cus
 - **Secret Links:** Generates a unique, shareable link for each envelope.
 - **Responsive:** Works seamlessly on mobile and desktop.
 
-## 🛠️ Technologies Used
+## 🛠️ Built With
 - **Frontend:** HTML, CSS, JavaScript (Vanilla)
 - **Database:** Firebase Firestore (for saving envelope data)
 - **Authentication:** Firebase Anonymous Auth
