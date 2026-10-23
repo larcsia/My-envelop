@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#000000">
+<title>My Envelop</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<nav class="navbar">My Envelop</nav>
+
+<main class="layout edit" id="layout">
+  <section class="stage">
+    <div class="hero">
+      <h1 id="mainTitle">Create an Envelope.</h1>
+      <p id="subTitle">Customize below to preview.</p>
+    </div>
+
+    <div class="envelope-wrapper" id="envelope" role="button" tabindex="0" aria-label="Open envelope">
+      <div class="envelope">
+        <div class="flap-wrapper">
+          <div class="flap"></div>
+          <div class="wax-seal" id="waxSeal"><svg viewBox="0 0 320 320" fill="none" stroke-linecap="round"><defs><radialGradient id="wb" cx="35%" cy="28%" r="85%"><stop offset="0" style="stop-color:var(--l)"/><stop offset=".55" style="stop-color:var(--m)"/><stop offset="1" style="stop-color:var(--d)"/></radialGradient><linearGradient id="wr" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".85"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset="1" style="stop-color:var(--d)" stop-opacity=".6"/></linearGradient><radialGradient id="wd" cx="40%" cy="35%" r="75%"><stop offset="0" style="stop-color:var(--l)" stop-opacity=".9"/><stop offset=".6" style="stop-color:var(--m)"/></radialGradient><linearGradient id="wg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--d)" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity=".7"/></linearGradient><clipPath id="wc"><circle cx="160" cy="160" r="97"/></clipPath><filter id="wf"><feGaussianBlur stdDeviation="1.1"/></filter></defs><path d="M294,160C293,164 291,168 289,171C287,175 284,178 282,181C279,185 276,187 273,190C270,193 267,195 264,198C262,200 259,203 257,205C256,208 254,211 253,214C251,216 250,219 249,223C248,226 248,229 247,233C246,236 244,240 243,243C242,246 240,250 238,253C236,256 234,259 231,262C229,265 226,267 223,270C220,272 217,274 214,276C211,278 208,280 204,281C201,283 197,284 193,285C190,286 186,287 182,287C179,287 175,287 171,287C167,287 164,286 160,285C156,284 153,283 149,281C146,280 143,278 139,277C136,275 133,274 130,273C127,271 123,270 120,269C117,269 113,268 110,267C106,267 103,267 99,266C95,265 91,265 87,264C84,263 80,261 76,260C73,258 70,255 67,253C65,250 62,247 61,243C59,240 58,236 57,232C56,228 56,224 55,220C55,216 55,213 55,209C55,205 55,202 55,198C55,195 54,192 54,188C53,185 52,182 52,179C51,176 50,173 48,170C47,167 46,163 45,160C44,157 43,153 42,150C42,146 41,143 40,139C40,135 40,131 39,128C39,124 39,120 39,116C40,112 40,108 41,104C41,100 42,96 44,93C45,89 47,85 49,82C51,79 54,76 57,73C60,71 63,69 67,67C71,65 75,64 79,63C83,62 87,62 91,61C95,61 99,61 103,61C106,60 110,60 113,59C116,58 119,58 122,56C125,55 128,53 131,52C134,50 137,48 140,46C143,44 146,42 150,40C153,38 156,37 160,36C164,35 167,34 171,34C175,34 178,35 182,36C185,36 189,38 192,39C196,41 199,43 202,45C205,47 208,49 211,51C214,53 217,55 220,57C222,59 225,61 228,63C231,65 233,67 236,70C238,72 241,74 243,77C246,79 248,82 251,84C253,87 255,89 257,92C260,94 262,97 265,100C267,102 270,105 272,108C275,111 277,113 280,116C282,119 285,123 287,126C289,129 291,133 293,137C294,140 295,144 295,148C296,152 295,156 294,160Z" fill="url(#wb)"/><path d="M294,160C293,164 291,168 289,171C287,175 284,178 282,181C279,185 276,187 273,190C270,193 267,195 264,198C262,200 259,203 257,205C256,208 254,211 253,214C251,216 250,219 249,223C248,226 248,229 247,233C246,236 244,240 243,243C242,246 240,250 238,253C236,256 234,259 231,262C229,265 226,267 223,270C220,272 217,274 214,276C211,278 208,280 204,281C201,283 197,284 193,285C190,286 186,287 182,287C179,287 175,287 171,287C167,287 164,286 160,285C156,284 153,283 149,281C146,280 143,278 139,277C136,275 133,274 130,273C127,271 123,270 120,269C117,269 113,268 110,267C106,267 103,267 99,266C95,265 91,265 87,264C84,263 80,261 76,260C73,258 70,255 67,253C65,250 62,247 61,243C59,240 58,236 57,232C56,228 56,224 55,220C55,216 55,213 55,209C55,205 55,202 55,198C55,195 54,192 54,188C53,185 52,182 52,179C51,176 50,173 48,170C47,167 46,163 45,160C44,157 43,153 42,150C42,146 41,143 40,139C40,135 40,131 39,128C39,124 39,120 39,116C40,112 40,108 41,104C41,100 42,96 44,93C45,89 47,85 49,82C51,79 54,76 57,73C60,71 63,69 67,67C71,65 75,64 79,63C83,62 87,62 91,61C95,61 99,61 103,61C106,60 110,60 113,59C116,58 119,58 122,56C125,55 128,53 131,52C134,50 137,48 140,46C143,44 146,42 150,40C153,38 156,37 160,36C164,35 167,34 171,34C175,34 178,35 182,36C185,36 189,38 192,39C196,41 199,43 202,45C205,47 208,49 211,51C214,53 217,55 220,57C222,59 225,61 228,63C231,65 233,67 236,70C238,72 241,74 243,77C246,79 248,82 251,84C253,87 255,89 257,92C260,94 262,97 265,100C267,102 270,105 272,108C275,111 277,113 280,116C282,119 285,123 287,126C289,129 291,133 293,137C294,140 295,144 295,148C296,152 295,156 294,160Z" stroke="url(#wr)" stroke-width="5" transform="translate(160 160) scale(.97) translate(-160 -160)"/><circle cx="160" cy="160" r="102" stroke="url(#wg)" stroke-width="4"/><circle cx="160" cy="160" r="98" fill="url(#wd)"/><g clip-path="url(#wc)" filter="url(#wf)"><path d="M181,190A37,37 0 0 1 138,189" stroke="#fff" stroke-opacity="0.19" stroke-width="4"/><path d="M197,174A40,40 0 0 1 164,200" stroke="var(--d)" stroke-opacity="0.10" stroke-width="4"/><path d="M175,169A17,17 0 0 1 160,177" stroke="#fff" stroke-opacity="0.35" stroke-width="2"/><path d="M140,139A29,29 0 0 1 182,141" stroke="var(--d)" stroke-opacity="0.17" stroke-width="4"/><path d="M243,185A86,86 0 0 1 139,243" stroke="#fff" stroke-opacity="0.24" stroke-width="3"/><path d="M152,180A21,21 0 0 1 140,154" stroke="var(--d)" stroke-opacity="0.12" stroke-width="4"/><path d="M118,204A61,61 0 0 1 103,139" stroke="#fff" stroke-opacity="0.19" stroke-width="2"/><path d="M148,135A28,28 0 0 1 175,137" stroke="var(--d)" stroke-opacity="0.14" stroke-width="4"/><path d="M146,204A46,46 0 0 1 114,151" stroke="#fff" stroke-opacity="0.32" stroke-width="3"/><path d="M105,151A56,56 0 0 1 168,105" stroke="var(--d)" stroke-opacity="0.19" stroke-width="3"/><path d="M224,218A86,86 0 0 1 145,245" stroke="#fff" stroke-opacity="0.33" stroke-width="3"/><path d="M208,172A49,49 0 0 1 161,209" stroke="var(--d)" stroke-opacity="0.19" stroke-width="4"/><path d="M129,232A79,79 0 0 1 83,147" stroke="#fff" stroke-opacity="0.30" stroke-width="4"/><path d="M185,121A47,47 0 0 1 198,187" stroke="var(--d)" stroke-opacity="0.16" stroke-width="5"/><path d="M155,144A17,17 0 0 1 174,151" stroke="#fff" stroke-opacity="0.38" stroke-width="5"/><path d="M135,182A34,34 0 0 1 132,141" stroke="var(--d)" stroke-opacity="0.10" stroke-width="4"/><path d="M178,177A25,25 0 0 1 166,184" stroke="#fff" stroke-opacity="0.33" stroke-width="3"/><path d="M136,180A31,31 0 0 1 140,137" stroke="var(--d)" stroke-opacity="0.11" stroke-width="4"/><path d="M200,124A54,54 0 0 1 199,197" stroke="#fff" stroke-opacity="0.35" stroke-width="3"/><path d="M133,194A44,44 0 0 1 126,133" stroke="var(--d)" stroke-opacity="0.21" stroke-width="3"/><path d="M163,185A25,25 0 0 1 144,180" stroke="#fff" stroke-opacity="0.28" stroke-width="4"/><path d="M192,161A32,32 0 0 1 177,187" stroke="var(--d)" stroke-opacity="0.14" stroke-width="4"/><path d="M129,81A84,84 0 0 1 217,98" stroke="#fff" stroke-opacity="0.30" stroke-width="5"/><path d="M173,150A16,16 0 0 1 171,172" stroke="var(--d)" stroke-opacity="0.20" stroke-width="5"/><path d="M126,185A42,42 0 0 1 118,160" stroke="#fff" stroke-opacity="0.31" stroke-width="2"/><path d="M164,177A17,17 0 0 1 153,176" stroke="var(--d)" stroke-opacity="0.14" stroke-width="2"/></g><ellipse cx="105" cy="88" rx="60" ry="14" fill="#fff" opacity=".22" transform="rotate(-28 105 88)" filter="url(#wf)"/></svg></div>
+        </div>
+        <div class="pocket"></div>
+        <div class="stamp" id="stamp"><img id="stampImg" alt="Stamp"></div>
+        <div class="paper" id="paper"></div>
+      </div>
+    </div>
+    <a class="make" href="?">Create your own envelope</a>
+  </section>
+
+  <section class="panel">
+    <div class="gt">Message</div>
+    <div class="group">
+      <div class="row"><input class="field" id="to" type="text" placeholder="To: (e.g. Dear Sarah)" maxlength="60"></div>
+      <div class="row"><textarea class="field" id="msg" placeholder="Write your message..." maxlength="800"></textarea></div>
+    </div>
+
+    <div class="gt">Attachment</div>
+    <div class="group">
+      <div class="row"><input class="field" id="media" type="url" inputmode="url" autocapitalize="off" autocorrect="off" placeholder="Or paste a link (image, GIF, YouTube, Spotify…)"></div>
+      <div class="row pick"><label class="btn-file" for="mediaFile">Choose photo / GIF</label><input class="vh" type="file" id="mediaFile" accept="image/*"><span class="fname" id="mediaName"></span><button type="button" class="rm" id="mediaClear" hidden>Remove</button></div>
+      <div class="row"><span class="lbl">Size</span><input type="range" id="ms" min="20" max="100" value="70"><span class="val" id="msVal">70%</span></div>
+      <div class="row"><span class="lbl">Align</span>
+        <div class="seg" id="ma"><button data-v="left">Left</button><button data-v="center" class="on">Center</button><button data-v="right">Right</button></div></div>
+      <div class="row"><span class="lbl">Position</span>
+        <div class="seg" id="mp"><button data-v="above">Above text</button><button data-v="below" class="on">Below text</button></div></div>
+    </div>
+    <p class="hint">Supports images (.jpg .png .gif .webp), YouTube, Spotify, Apple Music, audio (.mp3) and video (.mp4) links.</p>
+
+    <div class="gt">Colors</div>
+    <div class="group colors">
+      <div><input type="color" id="envc" value="#2c2c2e"><span>Envelope</span></div>
+      <div><input type="color" id="letc" value="#f5f5f7"><span>Paper</span></div>
+      <div><input type="color" id="txtc" value="#1d1d1f"><span>Text</span></div>
+      <div><input type="color" id="sealc" value="#c97b84"><span>Seal</span></div>
+    </div>
+
+    <div class="gt">Stamp &amp; Seal</div>
+    <div class="group">
+      <div class="row"><label for="ssl">Wax Seal</label><input class="sw" type="checkbox" id="ssl" checked></div>
+      <div class="row"><label for="sst">Stamp</label><input class="sw" type="checkbox" id="sst" checked></div>
+      <div class="row"><input class="field" id="stp" type="url" inputmode="url" autocapitalize="off" placeholder="Or paste a stamp image link"></div>
+      <div class="row pick"><label class="btn-file" for="stampFile">Choose stamp photo</label><input class="vh" type="file" id="stampFile" accept="image/*"><span class="fname" id="stampName"></span><button type="button" class="rm" id="stampClear" hidden>Remove</button></div>
+      <div class="row"><span class="lbl">X</span><input type="range" id="stx" min="0" max="85" value="75"><span class="val" id="stxVal">75%</span></div>
+      <div class="row"><span class="lbl">Y</span><input type="range" id="sty" min="0" max="85" value="5"><span class="val" id="styVal">5%</span></div>
+    </div>
+
+    <div class="btns">
+      <button class="btn" id="copyBtn">Copy Link</button>
+      <button class="btn sec" id="shareBtn" hidden>Share</button>
+    </div>
+  </section>
+</main>
+
+<div class="backdrop" id="backdrop"></div>
+<div class="letter" id="letter" role="dialog" aria-hidden="true">
+  <div class="inner">
+    <h2 id="letterTo">Dear Friend,</h2>
+    <div class="media" id="letterMedia"></div>
+    <p id="letterMsg">Your secret message...</p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
