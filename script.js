@@ -2,7 +2,6 @@ import { db } from './firebase.js';
 import { collection, addDoc, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-firestore.js";
 import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-auth.js";
 
-// تم تحديث البيانات الجديدة هنا
 const CLOUDINARY_CLOUD_NAME = 'ekhncdna';
 const CLOUDINARY_UPLOAD_PRESET = 'My envelop'; 
 
@@ -235,8 +234,11 @@ async function init() {
 
     const P = new URLSearchParams(location.search);
     const id = P.get('id');
+    const view = P.get('view');
 
     if (id) {
+        document.getElementById('welcomeScreen').classList.add('hidden');
+        document.getElementById('layout').style.display = 'grid';
         document.body.classList.add('view');
         $('layout').classList.remove('edit');
         $('mainTitle').textContent = "You've got a secret message.";
@@ -253,9 +255,20 @@ async function init() {
             console.error("Error loading", e);
             $('subTitle').textContent = 'Error loading message.';
         }
-    } else {
+    } else if (view === 'create') {
+        document.getElementById('welcomeScreen').classList.add('hidden');
+        document.getElementById('layout').style.display = 'grid';
         update();
+    } else {
+        document.getElementById('layout').style.display = 'none';
+        document.getElementById('welcomeScreen').classList.remove('hidden');
     }
 }
+
+document.getElementById('startBtn').addEventListener('click', () => {
+    window.history.replaceState({}, '', '?view=create');
+    document.getElementById('welcomeScreen').classList.add('hidden');
+    document.getElementById('layout').style.display = 'grid';
+});
 
 init();
