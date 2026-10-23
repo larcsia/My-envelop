@@ -167,7 +167,7 @@ $('copyBtn').onclick=async()=>{
 if(navigator.share){
   $('shareBtn').hidden=false;
   $('shareBtn').onclick=async()=>{
-      const baseUrl = window.location.href.split('?')[0].split('#')[0];
+      const baseUrl = window.location.origin + window.location.pathname;
       try{
           await navigator.share({
               title: 'My Envelop', 
@@ -231,10 +231,8 @@ async function init() {
     try {
         const auth = getAuth();
         await signInAnonymously(auth);
-        console.log("Logged in anonymously to Firebase");
     } catch (error) {
         console.error("Auth Error: ", error);
-        toast("Auth Error: " + error.message);
     }
 
     const P = new URLSearchParams(location.search);
