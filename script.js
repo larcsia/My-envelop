@@ -221,6 +221,18 @@ document.querySelectorAll('.seg button').forEach(b=>b.addEventListener('click',(
   addEventListener('scroll',()=>{if(!raf)cur=target=scrollY},{passive:true});
 })();
 
+let lastScrollY = window.scrollY;
+const navbar = document.querySelector('.navbar');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > lastScrollY && window.scrollY > 50) {
+        navbar.classList.add('hide');
+    } else {
+        navbar.classList.remove('hide');
+    }
+    lastScrollY = window.scrollY;
+}, { passive: true });
+
 async function init() {
     try {
         const auth = getAuth();
