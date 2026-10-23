@@ -100,7 +100,15 @@ body::before {
   animation: up 1s cubic-bezier(0.16, 1, 0.3, 1) both;
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
-
+.welcome-icon {
+  width: 90px;
+  height: 90px;
+  border-radius: 22px;
+  object-fit: cover;
+  margin-bottom: 15px;
+  box-shadow: 0 8px 24px rgba(201, 123, 132, 0.3);
+  animation: up 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
 .welcome-content h1 {
   font-size: clamp(28px, 6vw, 38px);
   margin-bottom: 12px;
