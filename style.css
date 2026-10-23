@@ -70,7 +70,6 @@ body::before {
   background: radial-gradient(40vmax 40vmax at 12% 18%, rgba(201, 123, 132, 0.28), transparent 70%), radial-gradient(45vmax 45vmax at 90% 30%, rgba(10, 132, 255, 0.16), transparent 70%), radial-gradient(40vmax 40vmax at 50% 105%, rgba(232, 164, 174, 0.14), transparent 70%);
 }
 
-/* Welcome Screen Styles */
 .welcome-screen {
   position: fixed;
   inset: 0;
@@ -150,6 +149,11 @@ body::before {
   backdrop-filter: blur(30px) saturate(180%);
   -webkit-backdrop-filter: blur(30px) saturate(180%);
   border-bottom: 0.5px solid var(--glass-line);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), background 0.3s;
+}
+
+.navbar.hide {
+  transform: translateY(-100%);
 }
 
 .layout {
@@ -290,7 +294,6 @@ input[type=range]::-moz-range-thumb { width: 16px; height: 16px; border: 0; bord
   html { scroll-behavior: auto; }
 }
 @media(max-width: 959px), (pointer: coarse) {
-  .navbar { background: var(--bg); backdrop-filter: none; -webkit-backdrop-filter: none; }
-  .btns { background: var(--bg); backdrop-filter: none; -webkit-backdrop-filter: none; }
+  .btns { background: rgba(20,20,22,.8); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); }
   .make { backdrop-filter: none; -webkit-backdrop-filter: none; }
 }
