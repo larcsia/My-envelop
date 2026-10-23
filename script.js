@@ -170,8 +170,6 @@ if(navigator.share){
       const baseUrl = window.location.origin + window.location.pathname;
       try{
           await navigator.share({
-              title: 'My Envelop', 
-              text: 'Create and send your own personalized digital envelopes!', 
               url: baseUrl
           });
       }catch(err){}
